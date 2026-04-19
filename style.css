@@ -1,6 +1,5 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* fade-in animation — moves up 12px and goes from invisible to visible */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(12px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -8,7 +7,7 @@
 
 body {
   font-family: system-ui, sans-serif;
-  background: #ffffff;
+  background: linear-gradient(160deg, #ffffff 0%, #eff6ff 100%);
   color: #111111;
   display: flex;
   flex-direction: column;
@@ -34,6 +33,9 @@ h1 { font-size: 2.5rem; }
 
 #links { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
 #links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   color: #2563eb;
   text-decoration: none;
   font-weight: 600;
@@ -43,6 +45,7 @@ h1 { font-size: 2.5rem; }
   padding: 0.5rem 1.4rem;
   transition: transform 0.15s, box-shadow 0.15s;
 }
+#links a svg { width: 1.1rem; height: 1.1rem; }
 #links a:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 18px rgba(37,99,235,0.2);
